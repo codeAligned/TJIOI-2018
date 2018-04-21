@@ -19,9 +19,12 @@ def sim(arr,reps):
     return ans
 
 def dumb(arr,reps):
-    ans=list(range(len(arr)))
+    reps -= 1
+    t = arr[:]
+    ans = arr[:]
     for i in range(reps):
-        ans=merge(ans,arr)
+        for j in range(len(ans)):
+            ans[j] = t[ans[j]]
     return ans
 
 def case():
@@ -29,9 +32,11 @@ def case():
     n=int(sarr[0])
     reps=int(sarr[1])
     arr=[int(x) for x in input().split()]
-    #dans=dumb(arr,reps)
+    dans=dumb(arr,reps)
     ans=sim(arr,reps)
-    #print(dans==ans)
+    assert(dans==ans)
+    #print(dans)
+    #print(ans)
     for i in range(n):
         print(ans[i])
 
@@ -67,3 +72,5 @@ def gen(idn,reps):
     f=open('output'+str(idn)+'.txt','w')
     a=sim(arr,reps)
     f.write(str(a)+'\n')
+
+case()
