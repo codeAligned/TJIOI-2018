@@ -1,0 +1,32 @@
+name: 2018_test_run
+description: TJ IOI 2018 Programming Round
+tasks:
+- Bronze1
+- Bronze2
+- Bronze3
+- Bronze4
+- Silver1
+- Silver2
+- Silver3
+- Gold1
+- Gold2
+- Platinum1
+users:
+- username: test
+  password: test123
+  hidden: true
+- username: user1
+  password: user1
+  hidden: true
+- username: user2
+  password: user2
+  hidden: true
+- username: user3
+  password: user3
+  hidden: true
+- username: user4
+  password: user4
+  hidden: true
+- username: user5
+  password: user5
+  hidden: true
