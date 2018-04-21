@@ -56,4 +56,5 @@ def genCase(idn,n):
         a,b=mapLen(arr)
         f.write(str(a)+' '+str(b)+'\n')
         
+case()
 #134.8934371471405

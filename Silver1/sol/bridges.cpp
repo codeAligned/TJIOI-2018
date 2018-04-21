@@ -16,13 +16,11 @@ void dfs(long n) {
    }
 }
 int main() {
-   ofstream fout ("bridges.out");
-   ifstream fin ("bridges.in");
    long N, M;
-   fin >> N >> M;
+   cin >> N >> M;
    for (int i=0; i<M; i++) {
       long n1, n2;
-      fin >> n1 >> n2;
+      cin >> n1 >> n2;
       edges[n1-1].push_back(n2-1);
       edges[n2-1].push_back(n1-1);
    }
@@ -33,5 +31,5 @@ int main() {
          components++;   
       }
    }
-   fout << components-1 << '\n';
+   cout << components-1 << '\n';
 }

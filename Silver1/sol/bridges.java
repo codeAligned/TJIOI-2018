@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Bridges {
+public class bridges {
 	public static int[] vis = new int[(int)1e5+1];
 	public static int dfs(ArrayList< ArrayList<Integer> > graph, int node) {
 		if(vis[node] == 1) return 0; // already in another component

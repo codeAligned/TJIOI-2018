@@ -40,13 +40,13 @@ struct segTree {
 int min1(int i, int j) {return min(i,j);}
 int max1(int i, int j) {return max(i,j);}
 
-int sieve[1'005];
-int ans[10'005];
-int a[10'005];
+int sieve[1005];
+int ans[10005];
+int a[10005];
 
 int main() {
 	ios_base::sync_with_stdio(0); // faster input/output
-	for(int x=0; x<10'005; x++) {
+	for(int x=0; x<10005; x++) {
 		ans[x] = -1;
 	}
 
