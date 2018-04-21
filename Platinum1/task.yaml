@@ -1,6 +1,6 @@
 name: max_noncoprime
 title: Maximal Non-Coprime
-time_limit: 3
+time_limit: 5
 memory_limit: 256
 n_input: 10
 infile: ""
