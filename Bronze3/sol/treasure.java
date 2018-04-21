@@ -7,11 +7,9 @@ public class treasure
    public static void main(String[] args)
    {
       try{
-         BufferedReader f = new BufferedReader ( new FileReader ("treasure.in"));
-         PrintWriter out = new PrintWriter ( new BufferedWriter ( new FileWriter ("treasure.out")));
+		 Scanner sc = new Scanner(System.in);
       
-         StringTokenizer st = new StringTokenizer(f.readLine());
-         int N = Integer.parseInt(st.nextToken());
+         int N = sc.nextInt();
          int x = 0;
          int y = 0;
          while(N>0){
@@ -32,9 +30,7 @@ public class treasure
          N = N/4;
          }
          String ans = x+", "+y;
-         out.println(ans);
-               
-                 out.close(); 
+         System.out.println(ans);
       }
       catch(Exception e)
       {
