@@ -27,21 +27,19 @@
 % Begin the actual problems
 \pagenumbering{arabic}
 
-\section{Merry-Go-Round}
+\section{Science Fair}
 
-While hundeds of joyful children ride a merry-go-round, you have to analyze it. The merry-go-round has  $N$ horses, each with some number of children riding it.  As the merry-go-round rotates, all the kids get off the first horse.  One kid from the first horse will get onto the second, one onto third, and so on until there are no kids left on the first horse.  Generally, if $K$ children get off horse $a$, 1 child will get onto each of the $K$ horses after $a$.  If there are more than $N$ kids on the horse, then one kid will get onto each horse, including the one they just dismounted, and the extras will go home.   The merry-go-round will then rotate by one horse so that all the kids on the second horse will get onto other horses as described above. This process will repeat forever.
+At the local science fair, students have to listen to a endless series of presentations.  There are are $N$ science fair competitors, numbered 0...$N-1$.  All the students who listened to presenter $a$ will move to presenter $a-1$ for the next round.  However, presenter $0$ is handing out free food!  Instead of going to presenter $N-1$ like good students, everyone who heard presenter $0$ will try to shorten their wait for more food.  To make it subtle, one person will go to presenter one, one to presenter two, and so on.  If $N$ people listen to presenter $0$, one will low-key stick around and hear it a second time.  If more than $N$ people listen to presenter $0$, one will go to each presenter, including $0$, and there rest will go home.
 
-Eventually, the same configuration of children will repeat.  A configuration is considered the same if there are the same number of kids on each horse.  All the horses are indistinguishable, so we compare configurations starting from the next horse in each, instad of tracking the originial first horse.
-
-From a starting configuration, the configuration of children will eventually repeat.  After the configuration repeats, it will stay in a cycle that infinitely repeats the same sequence of configurations.  Given the initial configuration of children, find the period of the cycle.  Also find the number of configurations, possibly including the initial state, that will never be repeated.  
+Let us define a configuration as the number of people at each presentation.  From a starting configuration, the configuration of students will eventually repeat.  After the configuration repeats, it will stay in a cycle that infinitely repeats the same sequence of configurations.  Given the initial configuration of listeners, find the period of the cycle.  Also find the number of configurations, possibly including the initial state, that will never be repeated.  
 
 
 \textbf{SHORT NAME:} \verb|MERRY|
 \blank
 \textbf{INPUT FORMAT:}\\
-The first line of input contains $N$, the number of horse on the merry-go-round $a$ ($1 \leq N \leq 150$).
+The first line of input contains $N$, the number of presenters $a$ ($1 \leq N \leq 150$).
 
-The second line contains the number of children on each horse, strating from the next horse ($1 \leq a_i \leq 150$), separated by spaces.
+The second line contains the number of people listening to each presenter ($1 \leq a_i \leq 150$), separated by spaces.
 
 
 \blank
@@ -75,12 +73,11 @@ Note: You can assume that both answers will be less than 20,000.
 The sequence of configurations is:
 \begin{verbatim}
 1 5 2 9 
-0 6 2 9
-1 1 3 10
-2 2 0 11
+6 2 9 0
+3 10 1 1
+11 2 2 0
 3 3 1 1
-0 4 2 2
-1 1 3 3
+4 2 2 0
+3 3 1 1
 \end{verbatim}
-Note that 3,3,1,1 and 1,1,3,3 are considered the same configuration, starting from the next horse.
 \end{document}
