@@ -2,7 +2,7 @@ import java.lang.*;
 import java.util.*;
 import java.math.*;
 import java.io.*;
-public class Treasure
+public class treasure
 {  
    public static void main(String[] args)
    {
