@@ -24,9 +24,9 @@ def makeCase(n,idn):
 	a=case(s)
 	f.write(a+'\n')
 
-cases=[6,26,999,1645,1895,1978,2000,1999,2000]
-for i in range(len(cases)):
-	makeCase(cases[i],i+1)
+#cases=[6,26,999,1645,1895,1978,2000,1999,2000]
+#for i in range(len(cases)):
+#	makeCase(cases[i],i+1)
 
 s=input()	
 print(case(s))
