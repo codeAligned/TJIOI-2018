@@ -19,6 +19,8 @@ def sim(arr,reps):
     return ans
 
 def dumb(arr,reps):
+    if reps == 0:
+        return list(range(len(arr)))
     reps -= 1
     t = arr[:]
     ans = arr[:]
@@ -32,9 +34,9 @@ def case():
     n=int(sarr[0])
     reps=int(sarr[1])
     arr=[int(x) for x in input().split()]
-    dans=dumb(arr,reps)
+    #dans=dumb(arr,reps)
     ans=sim(arr,reps)
-    assert(dans==ans)
+    #assert(dans==ans)
     #print(dans)
     #print(ans)
     for i in range(n):
