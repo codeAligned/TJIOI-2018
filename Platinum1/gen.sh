@@ -1,0 +1,18 @@
+python3 gen.py 50 50 .5 > input/input1.txt;
+python3 gen.py 500 500 .5 > input/input2.txt;
+python3 gen.py 5000 5000 .6 > input/input3.txt;
+python3 gen.py 6000 6000 .4 > input/input4.txt;
+python3 gen.py 9000 9000 .5 > input/input5.txt;
+python3 gen.py 10000 10000 .5 > input/input6.txt;
+python3 gen.py 10000 10000 .5 > input/input7.txt;
+python3 gen.py 10000 10000 .1 > input/input8.txt;
+python3 gen.py 10000 10000 .9 > input/input9.txt;
+cat input/input1.txt | ./s > output/output1.txt;
+cat input/input2.txt | ./s > output/output2.txt;
+cat input/input3.txt | ./s > output/output3.txt;
+cat input/input4.txt | ./s > output/output4.txt;
+cat input/input5.txt | ./s > output/output5.txt;
+cat input/input6.txt | ./s > output/output6.txt;
+cat input/input7.txt | ./s > output/output7.txt;
+cat input/input8.txt | ./s > output/output8.txt;
+cat input/input9.txt | ./s > output/output9.txt;

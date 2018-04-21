@@ -1,0 +1,55 @@
+\documentclass[twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{afterpage}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+% Before the actual contest
+\pagenumbering{roman}
+
+% Begin the actual problems
+\pagenumbering{arabic}
+
+\section{Palindrome}
+
+You're given a string $s$, consisting of lowercase letters, whose length is less than $10^5$.
+Please determine the minimum number of characters you must change to make $s$ read the same forwards and backward.
+\blank
+\textbf{SHORT NAME:} \verb|palindrome|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains the string $s$. The length of $s$ will be between $1$ and $10^5$, inclusive.
+
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output an integer $k$ that denotes the minimum number of characters that must be changed in $s$ to make it a palindrome.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+awejsewz
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+2
+\end{verbatim}
+
+We can change the string to ``zwessewz" with two edits, making it a palindrome.
+
+\end{document}

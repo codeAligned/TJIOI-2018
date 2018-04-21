@@ -1,0 +1,92 @@
+\documentclass[twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{afterpage}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+% Before the actual contest
+\pagenumbering{roman}
+
+% Begin the actual problems
+\pagenumbering{arabic}
+
+\section{Platinum 1}
+
+Given an integer array $a$ of length $N$ ($1 \leq N \leq 10^4$, $1 \leq a_i \leq 10^3$), perform $Q$ queries ($1 \leq Q \leq 10^4$).
+
+Queries will can be in the following formats:
+\begin{itemize}
+    \item \verb|C| \textit{i} \textit{v}: change the number at index $i$ (0-indexed) to the value $v$ ($1 \leq v \leq 10^3$).
+    \item \verb|F| \textit{i} \textit{j} \textit{v}:
+    find the maximal number $k$ with index between $i$ and $j$ (inclusive) such that $gcd(k, v) \neq 1$. In other words, $k$ is the maximum in $a[i...j]$ such that $k$ shares a factor (other than 1) with $v$ ($1 \leq v \leq 10^3$). If there is no such number, output $-1$.
+\end{itemize}
+
+\blank
+Note: There are $168$ primes less than $10^3$.
+\blank
+\textbf{SHORT NAME:} \verb|TBD|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains $N$, the length of the array $a$ ($1 \leq N \leq 10^4$).
+
+The second line contains the elements of array $a$ ($1 \leq a_i \leq 10^3$), separated by spaces.
+
+The third line contains the number of queries $Q$ ($1 \leq Q \leq 10^4$).
+
+The fourth through $3+Q$ lines (inclusive) contain each query. Queries are either of the format \verb|C| \textit{i} \textit{v} or \verb|F| \textit{i} \textit{j} \textit{v} ($0 \leq i, j \leq N-1$, $1 \leq v \leq 10^3$).
+
+\blank
+\textbf{OUTPUT FORMAT:}\\
+For each query that starts with \verb|F|, output the maximal integer $k$ in $a[i...j]$ such that $gcd(k, v) \neq 1$, or $-1$ if $k$ does not exist.
+
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4
+2 3 49 25
+6
+C 0 10
+F 1 2 5
+F 0 3 5
+C 3 5
+F 0 3 5
+F 1 3 7
+\end{verbatim}
+
+%4
+%2 3 49 25
+%6
+%C 0 10          % 10 3 49 25
+%F 1 2 5         % 3 49          -> -1
+%F 0 3 5         % 10 3 49 25    -> 25
+%C 3 5           % 10 3 49 5
+%F 0 3 5         % 10 3 49 5     -> 10
+%F 1 3 7         % 3 49 5        -> 49
+
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+-1
+25
+10
+49
+\end{verbatim}
+
+
+\end{document}

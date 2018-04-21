@@ -1,0 +1,90 @@
+\documentclass[twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{afterpage}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+% Before the actual contest
+\pagenumbering{roman}
+
+% Begin the actual problems
+\pagenumbering{arabic}
+
+\section{Stock Market}
+
+Jaden recently starting trading in the stock market!
+
+His strategy is as follows: on day $0$, invest in $N$ stocks ($1 \leq N \leq 100$), allocating a certain amount of money to each of them. Then, like any diligent trader, he notes the daily percentage change of each of these $N$ stocks for the next $K$ days ($1 \leq K \leq 50$). 
+
+Over these $K$ days, does not make any additional trades (in fact, he uninstalls his broker app).
+
+Now that these $K$ days have passed, Jerry wants to figure out Jaden's net profit. Unfortunately for him, Jaden is rather secretive of his portfolio. Instead of giving Jerry his initial allocation of money for the $N$ stocks that he decided upon on day $0$, he gives Jerry $C$ possible initial allocations ($1 \leq C \leq 5000$), one of which is his actual allocation (the other allocations are from his friends, who tried to copy his strategy).
+
+Jerry is quite certain that the allocation that had the highest net profit is Jaden's actual allocation. Under this assumption, find the amount of money Jaden gained (or lost, as the case may be).
+
+Please print this value \textit{rounded to the nearest integer}.
+
+\blank
+This problem is batched. In 70\% of the test cases, $C \leq 50$.
+
+\blank
+\textbf{SHORT NAME:} \verb|stocks|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains the integers $ N $ and $K$, the number of stocks and the number of days.
+
+The second through $1+K$th lines each contain $N$ decimals, the $i$th of which denotes the percentage change of the $i$th stock for the day. That is, the second line denotes the daily percentage change for each stock on day one, the third line denotes the daily percentage change for each stock on day two, and so on.
+
+The third line contains an integer $C$, denoting the number of allocations.
+
+The fourth through $3+C$th lines each contain $N$ decimals (between $1$ and $1000$), denoting a single possible allocation.
+\blank
+Note: the daily percentage change for a given stock will never exceed 20\% in absolute value.
+
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output a single integer denoting the amount Jaden has gained (negative if he lost money), rounded to the nearest integer, under the assumption that the most profitable allocation was his actual allocation.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+2 3
+-18.7 2.2
+-10.1 -6.3
+5.8 0.0
+3
+950.2 305.72
+5.0 5.0
+306.1 406.16
+
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+-1
+\end{verbatim}
+The optimal configuration is the second, in which he invests \$5 in both stocks A and B.
+
+For stock A, he ends up with \$3.87.
+
+For stock B, he ends up with \$4.79.
+
+This totals to \$8.65, a loss of \$1.35.
+
+
+\end{document}

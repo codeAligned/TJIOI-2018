@@ -1,0 +1,53 @@
+\documentclass[twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{afterpage}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+% Before the actual contest
+\pagenumbering{roman}
+
+% Begin the actual problems
+\pagenumbering{arabic}
+
+\section{Treasure}
+Jimmy is trying to get to the treasure. He starts at (0,0) and has a map, in the form of a number. Jimmy knows how to decode the number into directions because he has just learned about division and remainders. Jimmy must divide the number by 4 and act based on the remainder. 0 - go North, 1 - go East, 2 - go South, 3 - go West. Jimmy must then repeat with the quotient until he gets 0.
+\blank
+Print out the location of the treasure 
+\blank
+\textbf{SHORT NAME:} \verb|t|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains the integer $ N $, the map number. ($1 \leq N \leq 100,000$)
+\blank
+\textbf{OUTPUT FORMAT:}\\
+Output a two integers separated by a comma and a space which represent the location of the treasure.
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+5
+\end{verbatim}
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+2, 0
+\end{verbatim}
+
+
+\end{document}

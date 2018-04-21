@@ -1,0 +1,82 @@
+\documentclass[twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{afterpage}
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+\newcommand{\blank}{\vskip 3mm}
+\setlength\parindent{0pt}
+\renewcommand\thesection{\Alph{section}}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+% Before the actual contest
+\pagenumbering{roman}
+
+% Begin the actual problems
+\pagenumbering{arabic}
+
+\section{Merry-Go-Round}
+
+While hundreds of joyful children ride a merry-go-round, you have to analyze it. The merry-go-round has  $N$ horses, each with some number of children riding them. As the merry-go-round rotates, all the kids get off the first horse in the following manner: one kid from the first horse will get off the first and onto the second, another from the first horse will go to the third, then to the fourth, and so on until there are no kids left on the first horse. If there are more than $N$ kids on the first horse, then one kid will get onto each horse (including the first horse, which they also dismount from), and the extras will go home. The merry-go-round will then rotate by one horse so that all the kids on the second horse will get onto other horses as described above. This process will repeat forever.
+
+Eventually, the configurations will begin to repeat. In other words, if we do the above process enough times, we will reach a prior configuration again. Two configurations are considered the same if there are the same number of kids on each horse. The horses are indistinguishable, so we don't care what horse we designate the ``first" horse to be. For instance, the if the number of kids on a three-horse merry-go-round is 1,2,3, this is identical to a scenario in which the number of kids is 2,3,1.
+
+After a given configuration repeats, we will begin to cycle infinitely between certain configurations. Given the initial configuration of children, find the period of this cycle. Also find the number of configurations, possibly including the initial state, that will never be repeated.
+
+%For example, if we have configurations A, B, C, D, E that go A $\rightarrow$ B $\rightarrow$ C $\rightarrow$ D $\rightarrow$ E $\rightarrow$ C $\rightarrow$ D $\rightarrow$ E..., the period of the cycle (C $\rightarrow$ D $\rightarrow$ E) is three and the number of configurations that will never be repeated is two (A, B).
+\blank
+\textbf{SHORT NAME:} \verb|MERRY|
+\blank
+\textbf{INPUT FORMAT:}\\
+The first line of input contains $N$, the number of horse on the merry-go-round $a$ ($1 \leq N \leq 150$).
+
+The second line contains the number of children on each horse, starting from the next horse ($1 \leq a_i \leq 150$), separated by spaces.
+
+\blank
+\textbf{OUTPUT FORMAT:}\\
+First print the number of steps in the cycle, followed by a space, and then the number of configurations that are never repeated.
+
+Note: You can assume that both answers will be less than 20,000.
+
+\blank
+\textbf{SAMPLE INPUT:}
+\begin{verbatim}
+4
+1 5 2 9
+\end{verbatim}
+
+\textbf{SAMPLE OUTPUT:}
+\begin{verbatim}
+2 4
+\end{verbatim}
+
+The sequence of configurations is:
+\begin{verbatim}
+1 5 2 9     (A)
+0 6 2 9     (B)
+1 1 3 10    (C)
+2 2 0 11    (D)
+3 3 1 1     (E)
+0 4 2 2     (F)
+1 1 3 3     (E)
+2 2 0 4     (F)
+3 3 1 1     (E)
+...and so on.
+\end{verbatim}
+Note that 3, 3, 1, 1 and 1, 1, 3, 3 are considered the same configuration.
+Our configurations go A $\rightarrow$ B $\rightarrow$ C $\rightarrow$ D $\rightarrow$ E $\rightarrow$ F $\rightarrow$ E $\rightarrow$ F...
+
+The period is thus two (E $\rightarrow$ F) and the number of configurations that will never repeat is four (A, B, C, D).
+\end{document}
