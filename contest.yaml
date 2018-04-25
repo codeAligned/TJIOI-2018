@@ -17,16 +17,11 @@ users:
   hidden: true
 - username: user1
   password: user1
-  hidden: true
 - username: user2
   password: user2
-  hidden: true
 - username: user3
   password: user3
-  hidden: true
 - username: user4
   password: user4
-  hidden: true
 - username: user5
   password: user5
-  hidden: true
