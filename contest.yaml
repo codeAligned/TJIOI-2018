@@ -1,4 +1,4 @@
-name: 2018_test_run2
+name: tjioi_2018
 description: TJ IOI 2018 Programming Round
 tasks:
 - Bronze1
@@ -18,15 +18,59 @@ users:
 - username: user1
   password: user1
   hidden: true
-- username: user2
-  password: user2
-  hidden: true
-- username: user3
-  password: user3
-  hidden: true
-- username: user4
-  password: user4
-  hidden: true
-- username: user5
-  password: user5
-  hidden: true
+- username: team0
+  password: 4C7HR
+  first_name: Langley HS Coders
+  last_name: Langley High School
+- username: team1
+  password: OKPEK
+  first_name: The Exceptions
+  last_name: Langley High School
+- username: team2
+  password: E5NFT
+  first_name: Big Braddock
+  last_name: Lake Braddock Secondary School
+- username: team3
+  password: SLTP1
+  first_name: Null Pointers
+  last_name: Lake Braddock Secondary School
+- username: team4
+  password: WQFH4
+  first_name: The While(True) Warriors
+  last_name: BASIS Independent McLean
+- username: team5
+  password: VDVP0
+  first_name: ILITE CS
+  last_name: Battlefield High School
+- username: team6
+  password: 77TMG
+  first_name: The 4 Loops (WSHS)
+  last_name: West Springfield High School
+- username: team7
+  password: RDDEU
+  first_name: TBD 1
+  last_name: W. T. Woodson High School
+- username: team8
+  password: IAIWD
+  first_name: TBD 2
+  last_name: W. T. Woodson High School
+- username: team9
+  password: W7SFZ
+  first_name: AET - Team 1
+  last_name: Academies of Loudoun
+- username: team10
+  password: OTRSC
+  first_name: AET - Freshmen
+  last_name: Academies of Loudoun
+- username: team11
+  password: XMCN7
+  first_name: Cup of Java
+  last_name: South Lakes High School
+- username: team12
+  password: TA0BZ
+  first_name: AOL - 1
+  last_name: Academy of Engineering and Technology
+- username: team13
+  password: D1C0S
+  first_name: AOL-2
+  last_name: Academy of Engineering and Technology

@@ -4,7 +4,7 @@ pdftk a.pdf cat 6 output Bronze3/statement/statement.pdf
 pdftk a.pdf cat 7-8 output Bronze4/statement/statement.pdf
 pdftk a.pdf cat 9 output Silver1/statement/statement.pdf
 pdftk a.pdf cat 10 output Silver2/statement/statement.pdf
-pdftk a.pdf cat 11-12 output Silver3/statement/statement.pdf
-pdftk a.pdf cat 13 output Gold1/statement/statement.pdf
-pdftk a.pdf cat 14 output Gold2/statement/statement.pdf
-pdftk a.pdf cat 15 output Platinum1/statement/statement.pdf
+pdftk a.pdf cat 11 output Silver3/statement/statement.pdf
+pdftk a.pdf cat 12 output Gold1/statement/statement.pdf
+pdftk a.pdf cat 13 output Gold2/statement/statement.pdf
+pdftk a.pdf cat 14 output Platinum1/statement/statement.pdf
