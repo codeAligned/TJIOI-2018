@@ -1,6 +1,6 @@
 name: census
 title: Census
-time_limit: 2
+time_limit: 3
 memory_limit: 256
 n_input: 10
 infile: ""
